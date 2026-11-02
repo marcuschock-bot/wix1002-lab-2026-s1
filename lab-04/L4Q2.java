@@ -9,7 +9,11 @@ public class L4Q2 {
         int number = input.nextInt();
         int sum = 0;
         for (int i = 1; i <= number; i++){
-            
+            int innerSum = 0;
+            for (int j = 1; j <= i; j++)    
+                innerSum += j;
+            sum += innerSum;
         }
+        System.out.println("Total summation of following series is = " + sum);
+    }
 }
-
