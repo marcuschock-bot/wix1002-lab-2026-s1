@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class L4Q2 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a positive integer:");
-        int number = input.nextInt();
-        int sum = 0;
-        for (int i = 1; i <= number; i++){
-            int innerSum = 0;
-            for (int j = 1; j <= i; j++)    
-                innerSum += j;
-            sum += innerSum;
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a positive integer:");
+            int number = input.nextInt();
+            int sum = 0;
+            for (int i = 1; i <= number; i++){
+                int innerSum = 0;
+                for (int j = 1; j <= i; j++)
+                    innerSum += j;
+                sum += innerSum;
+            }
+            System.out.println("Total summation of following series is = " + sum);
         }
-        System.out.println("Total summation of following series is = " + sum);
     }
 }
